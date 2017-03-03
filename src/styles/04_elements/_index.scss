@@ -1,0 +1,162 @@
+/*doc
+---
+title: HTML Básico
+category: Elementos de diseño - HTML Básico
+---
+
+
+## Headings
+
+```example
+<h1>Heading Level 1</h1>
+<h2>Heading Level 2</h2>
+<h3>Heading Level 3</h3>
+<h4>Heading Level 4</h4>
+<h5>Heading Level 5</h5>
+<h6>Heading Level 6</h6>
+```
+
+## Paragraph
+
+```example
+<p>A paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>
+```
+
+## Inline elements
+```example
+<p><a href="#">This is a text link</a></p>
+
+<p><strong>Strong is used to indicate strong importance</strong></p>
+
+<p>The <em>em element</em> is text that is set off from the normal text</p>
+
+<p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation</p>
+
+<p><del>This text is deleted</del> and <ins>This text is inserted</ins></p>
+
+<p><small>This small text is small for for fine print, etc.</small></p>
+
+<p><s>This text has a strikethrough</s></p>
+
+<p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation</q></p>
+
+<p><cite>This is a citation</cite>
+```
+
+## Blockquote
+
+```example
+<blockquote> <p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text, and typically distinguished visually using indentation and a different typeface or smaller size quotation.</p> </blockquote>
+```
+
+## HR
+```example
+<hr />
+```
+
+## Unordered list
+```example
+<ul>
+  <li>This is a list item in an unordered list</li>
+  <li>An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an unordered list that can wrap onto a new line. </li>
+  <li>
+    Lists can be nested inside of each other
+    <ul>
+      <li>This is a nested list item</li>
+      <li>This is another nested list item in an unordered list</li>
+    </ul>
+  </li>
+  <li>This is the last list item</li>
+</ul>
+```
+
+## Ordered list
+```example
+<ol>
+  <li>This is a list item in an ordered list</li>
+  <li>An ordered list is a list in which the sequence of items is important. An ordered list does not necessarily contain sequence characters.</li>
+  <li>
+    Lists can be nested inside of each other
+    <ol>
+      <li>This is a nested list item</li>
+      <li>This is another nested list item in an ordered list</li>
+    </ol>
+  </li>
+  <li>This is the last list item</li>
+</ol>
+```
+
+## Definition list
+```example
+<dl>
+  <dt>Definition List</dt>
+  <dd>A number of connected items or names written or printed consecutively, typically one below the other.</dd>
+  <dt>This is a term.</dt>
+  <dd>This is the definition of that term, which both live in a <code>dl</code>.</dd>
+  <dt>Here is another term.</dt>
+  <dd>And it gets a definition too, which is this line.</dd>
+  <dt>Here is term that shares a definition with the term below.</dt>
+  <dd>And it gets a definition too, which is this line.</dd>
+</dl>
+```
+
+## Table
+```example
+<table>
+  <thead>
+    <tr>
+      <th>Table Heading 1</th>
+      <th>Table Heading 2</th>
+      <th>Table Heading 3</th>
+      <th>Table Heading 4</th>
+      <th>Table Heading 5</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Table Footer 1</th>
+      <th>Table Footer 2</th>
+      <th>Table Footer 3</th>
+      <th>Table Footer 4</th>
+      <th>Table Footer 5</th>
+    </tr>
+  </tfoot>
+  <tbody>
+  <tr>
+    <td>Table Cell 1</td>
+    <td>Table Cell 2</td>
+    <td>Table Cell 3</td>
+    <td>Table Cell 4</td>
+    <td>Table Cell 5</td>
+  </tr>
+  <tr>
+    <td>Table Cell 1</td>
+    <td>Table Cell 2</td>
+    <td>Table Cell 3</td>
+    <td>Table Cell 4</td>
+    <td>Table Cell 5</td>
+  </tr>
+  <tr>
+    <td>Table Cell 1</td>
+    <td>Table Cell 2</td>
+    <td>Table Cell 3</td>
+    <td>Table Cell 4</td>
+    <td>Table Cell 5</td>
+  </tr>
+  <tr>
+    <td>Table Cell 1</td>
+    <td>Table Cell 2</td>
+    <td>Table Cell 3</td>
+    <td>Table Cell 4</td>
+    <td>Table Cell 5</td>
+  </tr>
+  </tbody>
+</table>
+```
+*/
+
+//@import 'body';
+//@import 'links';
+//@import 'paragraph';
+//@import 'lists';
+//@import 'blockquote';

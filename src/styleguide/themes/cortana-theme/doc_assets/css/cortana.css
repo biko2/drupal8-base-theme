@@ -1,0 +1,779 @@
+/* ==========================================================
+ * cortana.scss
+ * Import all sass files to be build
+ *
+ * Author: Yann Gouffon, hello@yago.io
+ *
+ * Copyright 2014 Yann Gouffon
+ * Licensed under MIT
+ ========================================================== */
+/* ==========================================================
+ * variables.scss
+ * Project variables
+ *
+ * Author: Yann Gouffon, hello@yago.io
+ *
+ * Copyright 2014 Yann Gouffon
+ * Licensed under MIT
+ ========================================================== */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
+/* ==========================================================
+ * layout.scss
+ * Global layout styles
+ *
+ * Author: Yann Gouffon, hello@yago.io
+ *
+ * Copyright 2014 Yann Gouffon
+ * Licensed under MIT
+ ========================================================== */
+.cortana-body, #sb-site {
+  z-index: auto !important; }
+
+.sb-slidebar.sb-style-overlay {
+  box-shadow: 0 19px 60px rgba(0, 0, 0, 0.3), 0 15px 20px rgba(0, 0, 0, 0.22); }
+
+@media (min-width: 600px) {
+  .cortana-content-wrapper {
+    padding-left: 10px;
+    padding-right: 10px; } }
+
+#waiting {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9999999; }
+  html.sb-init #waiting {
+    display: none; }
+
+.section-nav {
+  display: none; }
+
+.cortana-header {
+  background: #fff !important;
+  padding: 21px 0 !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 999 !important;
+  border-bottom: 1px solid #d9dcde; }
+  .cortana-header h1 {
+    color: #333 !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: "Open Sans", sans-serif !important;
+    font-weight: normal !important;
+    font-size: 30px !important;
+    font-style: normal !important;
+    line-height: 1.1em !important;
+    text-transform: none !important; }
+    @media only screen and (max-width: 767px) {
+      .cortana-header h1 {
+        font-size: 20px !important; } }
+
+.cortana-container {
+  margin: 0 auto !important;
+  padding-bottom: 30px !important;
+  border: 0 solid #e7ecf2 !important; }
+  @media only screen and (max-width: 900px) {
+    .cortana-container {
+      padding: 0 0px 50px 0px !important; } }
+
+.cortana-content-wrapper {
+  border-radius: 4px !important;
+  padding-top: 80px !important; }
+
+.exampleOutput {
+  padding: 30px 0 10px !important;
+  position: relative !important;
+  width: 100% !important;
+  box-sizing: border-box !important; }
+  .exampleOutput:after {
+    content: 'Ejemplo' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    color: #7F8C8D !important;
+    border-right: 1px solid #e7ecf2 !important;
+    border-left: 1px solid #e7ecf2 !important;
+    border-bottom: 1px solid #e7ecf2 !important;
+    border-bottom-right-radius: 4px !important;
+    padding: 0px 5px !important;
+    display: inline-block !important;
+    font-family: "Open Sans", sans-serif !important;
+    font-size: 11px !important;
+    line-height: 1.9 !important; }
+  @media (min-width: 768px) {
+    .exampleOutput {
+      border: 1px solid #e7ecf2 !important;
+      padding: 30px 0 10px !important; } }
+
+.cortana-footer {
+  font-family: "Open Sans", sans-serif !important;
+  text-align: center !important;
+  padding-bottom: 50px !important;
+  font-size: 14px !important;
+  color: #7F8C8D !important;
+  background: none !important; }
+  .cortana-footer a {
+    color: #7F8C8D !important; }
+    .cortana-footer a:hover {
+      color: #E74C3C !important; }
+
+/* ==========================================================
+ * text.scss
+ * Global typographic styles
+ *
+ * Author: Yann Gouffon, hello@yago.io
+ *
+ * Copyright 2014 Yann Gouffon
+ * Licensed under MIT
+ ========================================================== */
+.cortana-content {
+  max-width: 900px !important;
+  margin: 0 auto;
+  background-color: #fff;
+  color: #000;
+  font-size: 13px !important;
+  line-height: 1.4em !important; }
+  .cortana-content h1, .cortana-content h2, .cortana-content h3, .cortana-content h4, .cortana-content h5, .cortana-content h6 {
+    font-family: "Open Sans", sans-serif !important;
+    font-weight: bold !important;
+    font-style: normal !important;
+    margin: 0 0 0.4em 0 !important;
+    line-height: 1.2em !important;
+    padding: 0.5em 30px 0.2em 0 !important;
+    color: #333 !important;
+    text-transform: none !important; }
+    @media only screen and (max-width: 900px) {
+      .cortana-content h1, .cortana-content h2, .cortana-content h3, .cortana-content h4, .cortana-content h5, .cortana-content h6 {
+        padding: 0.4em 10px !important; } }
+  .cortana-content h1 {
+    font-size: 36px !important; }
+    @media only screen and (max-width: 900px) {
+      .cortana-content h1 {
+        font-size: 28px !important; } }
+  .cortana-content h2 {
+    font-size: 28px !important; }
+    @media only screen and (max-width: 900px) {
+      .cortana-content h2 {
+        font-size: 23px !important; } }
+  .cortana-content h3 {
+    font-size: 25px !important; }
+    @media only screen and (max-width: 900px) {
+      .cortana-content h3 {
+        font-size: 21px !important; } }
+  .cortana-content p {
+    font-family: "Open Sans", sans-serif !important;
+    line-height: 1.6em !important;
+    padding: 0 !important;
+    font-size: 15px !important; }
+    @media only screen and (max-width: 900px) {
+      .cortana-content p {
+        padding: 0 10px !important; } }
+  .cortana-content blockquote, .cortana-content q {
+    margin: 30px !important;
+    border-left: 3px solid #d9dcde !important;
+    font-size: 18px !important;
+    text-transform: none !important; }
+    .cortana-content blockquote p, .cortana-content q p {
+      margin: 0 !important;
+      padding: 0 !important; }
+  .cortana-content table {
+    margin: 30px 0 !important;
+    width: 100%;
+    font-family: "Open Sans", sans-serif !important;
+    border-collapse: collapse !important; }
+    @media only screen and (max-width: 900px) {
+      .cortana-content table {
+        margin: 30px 0px !important; } }
+  .cortana-content table tr, .cortana-content table td, .cortana-content table th {
+    padding: 3px 5px !important;
+    border: 1px solid #ddd !important; }
+  .cortana-content table th {
+    font-weight: bold !important;
+    color: #333 !important; }
+  .cortana-content ul {
+    margin: 0 30px !important;
+    padding-left: 2em !important;
+    font-size: 1.1em !important; }
+  .cortana-content li {
+    margin: 1em 0.8em 1em 0 !important;
+    text-transform: none !important; }
+  .cortana-content a {
+    text-decoration: underline !important;
+    font-weight: normal !important;
+    color: #333 !important;
+    font-style: normal !important;
+    background: #fff !important;
+    transition: color 0.3s !important;
+    text-transform: none !important; }
+    .cortana-content a:hover, .cortana-content a:active, .cortana-content a:focus {
+      text-decoration: underline !important;
+      font-weight: normal !important;
+      color: #E74C3C !important;
+      font-style: normal !important;
+      background: #fff !important; }
+  .cortana-content:first-child h1, .cortana-content:first-child h2, .cortana-content:first-child h3, .cortana-content:first-child h4, .cortana-content:first-child h5, .cortana-content:first-child h6 {
+    margin-top: 0 !important;
+    border: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 10px !important; }
+
+/* ==========================================================
+ * navigation.scss
+ * Side navigation and inside navigation styles
+ *
+ * Author: Yann Gouffon, hello@yago.io
+ *
+ * Copyright 2014 Yann Gouffon
+ * Licensed under MIT
+ ========================================================== */
+.cortana-menu-btn {
+  width: 28px !important;
+  height: 28px !important;
+  margin: 0 !important;
+  position: absolute !important;
+  left: 25px !important;
+  top: 20px !important; }
+  .cortana-menu-btn:hover {
+    cursor: pointer !important; }
+    .cortana-menu-btn:hover span {
+      background: #333 !important; }
+  .cortana-menu-btn span {
+    display: block !important;
+    width: 100% !important;
+    height: 4px !important;
+    border-radius: 1px !important;
+    margin: 5px 0 !important;
+    background: #95A5A6 !important;
+    transition: background 0.3s !important; }
+  @media only screen and (max-width: 767px) {
+    .cortana-menu-btn {
+      top: 12px !important; } }
+
+.cortana-sidenav {
+  background: #fff !important;
+  border-right: 1px solid #ECF0F1; }
+
+.cortana-nav {
+  padding: 10px 0 !important;
+  padding-top: 20px !important;
+  margin: 0 !important; }
+  .cortana-nav ul {
+    padding: 0 !important;
+    margin: 0 !important; }
+  .cortana-nav li {
+    list-style-type: none !important;
+    display: inline !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-style: normal !important;
+    font-weight: normal !important; }
+  .cortana-nav li a {
+    display: block !important;
+    width: 100% !important;
+    padding: 1px 5% !important;
+    text-decoration: none !important;
+    font-family: "Open Sans", sans-serif !important;
+    color: #2C3E50 !important;
+    margin: 0 !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    text-transform: none !important;
+    background: transparent !important;
+    border: none !important;
+    transition: all 0.3s !important;
+    font-size: 13px !important;
+    box-sizing: border-box !important; }
+    .cortana-nav li a:hover, .cortana-nav li a:focus {
+      background: transparent !important;
+      color: #E74C3C !important;
+      font-size: 13px !important;
+      text-decoration: none !important; }
+    .cortana-nav li a.active {
+      background: #E74C3C !important;
+      color: #fff !important;
+      font-size: 13px !important;
+      text-decoration: none !important; }
+  .cortana-nav h3 {
+    padding: 5px 5% 0 5% !important;
+    margin: 5px 0 5px 0 !important;
+    font-family: "Open Sans", sans-serif !important;
+    color: #171d22 !important;
+    border-top: 1px solid #364350 !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    text-transform: none !important; }
+    .cortana-nav h3:first-child {
+      border: none; }
+
+.cortana-inside-nav {
+  margin-left: -190px !important;
+  width: 170px !important;
+  float: left !important;
+  margin-top: 100px !important; }
+  .cortana-inside-nav.cortana-stick-bottom {
+    position: fixed !important;
+    top: 0px !important;
+    bottom: auto !important; }
+  .cortana-inside-nav a {
+    color: #333 !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 5px 0 !important;
+    text-decoration: none !important;
+    font-family: "Open Sans", sans-serif !important;
+    transition: color 0.2s !important;
+    font-size: 16px !important;
+    background: transparent !important; }
+  .cortana-inside-nav li {
+    list-style-type: none  !important;
+    display: block !important;
+    margin: 0 !important; }
+    .cortana-inside-nav li.active a, .cortana-inside-nav li a:hover, .cortana-inside-nav li a:focus {
+      color: #E74C3C !important;
+      font-size: 16px !important;
+      background: transparent !important;
+      text-decoration: none !important; }
+  .cortana-inside-nav ul {
+    position: relative  !important;
+    padding: 0 !important;
+    top: -100px  !important;
+    margin-top: 100px  !important; }
+  @media only screen and (max-width: 1280px) {
+    .cortana-inside-nav {
+      float: none !important;
+      width: 100% !important;
+      margin-top: 0 !important;
+      margin-left: 0 !important;
+      padding: 0 30px !important;
+      position: relative !important;
+      z-index: 10 !important; }
+      .cortana-inside-nav li {
+        display: inline-block !important;
+        width: 45% !important; }
+      .cortana-inside-nav ul {
+        position: static !important; } }
+
+/* ==========================================================
+ * code.scss
+ * Code highlight colors scheme
+ *
+ * Author: Yann Gouffon, hello@yago.io
+ *
+ * Copyright 2014 Yann Gouffon
+ * Licensed under MIT
+ ========================================================== */
+.cortana-content code, .cortana-content pre {
+  display: inline-block;
+  font-family: Monaco, monospace !important;
+  font-size: 12px !important;
+  border: 1px solid #d9dcde !important;
+  padding: 2px 3px !important;
+  border-radius: 2px !important;
+  background: #fff !important;
+  margin: 0 3px 0 0 !important;
+  word-break: keep-all !important;
+  word-wrap: normal !important;
+  white-space: pre !important;
+  color: #333 !important; }
+
+.codeBlock {
+  padding: 30px 4% 10px !important;
+  background: #1e221d !important;
+  color: #fff !important;
+  font-size: 15px !important;
+  line-height: 1.4 !important;
+  overflow-x: auto !important;
+  margin-bottom: 20px !important;
+  position: relative !important;
+  width: auto !important; }
+  .codeBlock:after {
+    content: 'HTML' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    color: #7F8C8D !important;
+    border-right: 1px solid #7F8C8D !important;
+    border-bottom: 1px solid #7F8C8D !important;
+    border-bottom-right-radius: 4px !important;
+    padding: 0 5px !important;
+    display: inline-block !important;
+    font-family: "Open Sans", sans-serif !important;
+    font-size: 11px !important;
+    line-height: 1.9 !important; }
+  .codeBlock.jsExample:after {
+    content: 'JavaScript' !important; }
+  .codeBlock .highlight {
+    background: #1e221d !important; }
+  .codeBlock pre {
+    font-family: Monaco, monospace !important;
+    width: auto !important;
+    background: #1e221d !important;
+    word-break: keep-all !important;
+    word-wrap: normal !important;
+    white-space: pre !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    padding-left: 0 !important;
+    font-size: 12px !important;
+    position: relative !important;
+    line-height: 1.4 !important;
+    color: #fff !important;
+    border: none !important;
+    overflow: visible !important; }
+
+.exampleOutput {
+  border-right: 0 !important;
+  border-left: 0 !important;
+  background-color: #fff; }
+
+.codeExample,
+.codeExampleFull .codeBlock {
+  max-width: 900px !important;
+  margin: 0 auto;
+  background-color: #fff; }
+
+.codeExampleFull .exampleOutput {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+.codeBlock {
+  /* Comment */
+  /* Error */
+  /* Keyword */
+  /* Operator */
+  /* Comment.Multiline */
+  /* Comment.Preproc */
+  /* Comment.Single */
+  /* Comment.Special */
+  /* Generic.Deleted */
+  /* Generic.Emph */
+  /* Generic.Error */
+  /* Generic.Heading */
+  /* Generic.Inserted */
+  /* Generic.Output */
+  /* Generic.Prompt */
+  /* Generic.Strong */
+  /* Generic.Subheading */
+  /* Generic.Traceback */
+  /* Keyword.Constant */
+  /* Keyword.Declaration */
+  /* Keyword.Namespace */
+  /* Keyword.Pseudo */
+  /* Keyword.Reserved */
+  /* Keyword.Type */
+  /* Literal.Number */
+  /* Literal.String */
+  /* Name.Attribute */
+  /* Name.Builtin */
+  /* Name.Class */
+  /* Name.Constant */
+  /* Name.Decorator */
+  /* Name.Entity */
+  /* Name.Exception */
+  /* Name.Function */
+  /* Name.Label */
+  /* Name.Namespace */
+  /* Name.Tag */
+  /* Name.Variable */
+  /* Operator.Word */
+  /* Text.Whitespace */
+  /* Literal.Number.Float */
+  /* Literal.Number.Hex */
+  /* Literal.Number.Integer */
+  /* Literal.Number.Oct */
+  /* Literal.String.Backtick */
+  /* Literal.String.Char */
+  /* Literal.String.Doc */
+  /* Literal.String.Double */
+  /* Literal.String.Escape */
+  /* Literal.String.Heredoc */
+  /* Literal.String.Interpol */
+  /* Literal.String.Other */
+  /* Literal.String.Regex */
+  /* Literal.String.Single */
+  /* Literal.String.Symbol */
+  /* Name.Builtin.Pseudo */
+  /* Name.Variable.Class */
+  /* Name.Variable.Global */
+  /* Name.Variable.Instance */
+  /* Literal.Number.Integer.Long */ }
+  .codeBlock hll {
+    background-color: #ffffcc; }
+  .codeBlock .c {
+    color: #999988;
+    font-style: italic; }
+  .codeBlock .err {
+    color: #a61717; }
+  .codeBlock .k {
+    color: #ffffff; }
+  .codeBlock .o {
+    color: #ffffff; }
+  .codeBlock .cm {
+    color: #999988;
+    font-style: italic; }
+  .codeBlock .cp {
+    color: #999999;
+    font-style: italic; }
+  .codeBlock .c1 {
+    color: #999988;
+    font-style: italic; }
+  .codeBlock .cs {
+    color: #999999;
+    font-style: italic; }
+  .codeBlock .gd {
+    color: #ffffff;
+    background-color: #ffdddd; }
+  .codeBlock .ge {
+    color: #ffffff;
+    font-style: italic; }
+  .codeBlock .gr {
+    color: #aa0000; }
+  .codeBlock .gh {
+    color: #999999; }
+  .codeBlock .gi {
+    color: #ffffff;
+    background-color: #ddffdd; }
+  .codeBlock .go {
+    color: #888888; }
+  .codeBlock .gp {
+    color: #555555; }
+  .codeBlock .gu {
+    color: #aaaaaa; }
+  .codeBlock .gt {
+    color: #aa0000; }
+  .codeBlock .kc {
+    color: #ffffff; }
+  .codeBlock .kd {
+    color: #ffffff; }
+  .codeBlock .kn {
+    color: #ffffff; }
+  .codeBlock .kp {
+    color: #ffffff; }
+  .codeBlock .kr {
+    color: #ffffff; }
+  .codeBlock .kt {
+    color: #445588; }
+  .codeBlock .m {
+    color: #009999; }
+  .codeBlock .s {
+    color: #E6DB74; }
+  .codeBlock .na {
+    color: #A6E22E; }
+  .codeBlock .nb {
+    color: #66D9EF; }
+  .codeBlock .nc {
+    color: #445588; }
+  .codeBlock .no {
+    color: #A6E22E; }
+  .codeBlock .nd {
+    color: #3c5d5d; }
+  .codeBlock .ni {
+    color: #AE81FF; }
+  .codeBlock .ne {
+    color: #990000; }
+  .codeBlock .nf {
+    color: #990000; }
+  .codeBlock .nl {
+    color: #990000; }
+  .codeBlock .nn {
+    color: #555555; }
+  .codeBlock .nt {
+    color: #F92672; }
+  .codeBlock .nv {
+    color: #A6E22E; }
+  .codeBlock .ow {
+    color: #ffffff; }
+  .codeBlock .w {
+    color: #bbbbbb; }
+  .codeBlock .mf {
+    color: #009999; }
+  .codeBlock .mh {
+    color: #009999; }
+  .codeBlock .mi {
+    color: #009999; }
+  .codeBlock .mo {
+    color: #009999; }
+  .codeBlock .sb {
+    color: #E6DB74; }
+  .codeBlock .sc {
+    color: #E6DB74; }
+  .codeBlock .sd {
+    color: #E6DB74; }
+  .codeBlock .s2 {
+    color: #E6DB74; }
+  .codeBlock .se {
+    color: #E6DB74; }
+  .codeBlock .sh {
+    color: #E6DB74; }
+  .codeBlock .si {
+    color: #E6DB74; }
+  .codeBlock .sx {
+    color: #E6DB74; }
+  .codeBlock .sr {
+    color: #009926; }
+  .codeBlock .s1 {
+    color: #E6DB74; }
+  .codeBlock .ss {
+    color: #990073; }
+  .codeBlock .bp {
+    color: #999999; }
+  .codeBlock .vc {
+    color: #A6E22E; }
+  .codeBlock .vg {
+    color: #A6E22E; }
+  .codeBlock .vi {
+    color: #A6E22E; }
+  .codeBlock .il {
+    color: #009999; }
+
+/* ==========================================================
+ * search.scss
+ * Search field and autocomplete styles
+ *
+ * Author: Yann Gouffon, hello@yago.io
+ *
+ * Copyright 2014 Yann Gouffon
+ * Licensed under MIT
+ ========================================================== */
+.cortana-search {
+  position: absolute !important;
+  right: 25px !important;
+  top: 18px !important;
+  display: block !important;
+  width: 230px !important;
+  height: 38px !important;
+  box-sizing: border-box !important;
+  border-radius: 3px !important;
+  border: 1px solid #d9dcde !important;
+  box-shadow: none !important;
+  padding: 5px 10px 5px 50px !important;
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 14px !important;
+  border-box: box-sizing !important;
+  background: url("../img/search-icon.svg") no-repeat 10px 6px !important;
+  background: url("../img/search-icon.png") no-repeat 10px 6px !important \9 ; }
+  .cortana-search:focus {
+    outline: 0;
+    border: 1px solid #7F8C8D !important; }
+  .cortana-search::-webkit-input-placeholder {
+    font-style: italic; }
+  .cortana-search:-moz-placeholder {
+    font-style: italic; }
+
+@media only screen and (max-width: 767px) {
+  .cortana-search {
+    display: none !important; } }
+
+/* custom styles for the typeahead */
+.cortana-search-wrapper .dropdown-menu {
+  width: 230px !important;
+  margin-top: 12px !important;
+  padding: 8px 0 !important;
+  background-color: #fff !important;
+  border: 1px solid #d9dcde !important;
+  border-radius: 3px !important;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) !important; }
+
+.cortana-search-wrapper li {
+  padding: 8px 15px !important;
+  font-family: "Open Sans", sans-serif !important;
+  border-top: 1px solid #d9dcde !important; }
+  .cortana-search-wrapper li:first-child {
+    border: none !important; }
+
+.cortana-search-wrapper li a {
+  text-decoration: none !important;
+  color: #333 !important; }
+
+.cortana-search-wrapper li.active {
+  background-color: #E74C3C !important; }
+  .cortana-search-wrapper li.active a {
+    color: #fff !important; }
+
+.cortana-search-title {
+  font-weight: bold !important;
+  font-size: 14px !important;
+  margin: 0 !important;
+  margin-bottom: 5px !important; }
+
+.cortana-search-path {
+  font-weight: normal !important;
+  font-size: 12px !important;
+  margin: 0 !important;
+  word-wrap: break-word !important;
+  white-space: normal !important; }
+
+.cortana-search-wrapper .dropdown-menu li a,
+.cortana-search-wrapper .dropdown-menu li a:hover,
+.cortana-search-wrapper .dropdown-menu li a:focus,
+.cortana-search-wrapper .dropdown-menu .active a,
+.cortana-search-wrapper .dropdown-menu .active a:hover,
+.cortana-search-wrapper .dropdown-menu .active a:focus {
+  padding: 0 !important;
+  background: transparent !important; }
+
+.codeBlock {
+  display: none; }
+
+.codeBlock.is-visible {
+  display: block; }
+
+.demo-margin {
+  margin-bottom: 10px; }
+
+#sb-site {
+  background-color: #efeeea; }
+
+@media only screen and (max-width: 900px) {
+  .cortana-container {
+    padding-left: 0.625rem !important;
+    padding-right: 0.625rem !important; } }
+
+.cortana-content-wrapper {
+  padding-left: 0;
+  padding-right: 0; }
+
+.exampleOutput {
+  background-color: transparent; }
+
+.cortana-content,
+.codeExample,
+.codeExampleFull .codeBlock {
+  max-width: inherit;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: transparent; }
+
+@media (min-width: 544px) {
+  .cortana-content,
+  .codeExample,
+  .codeExampleFull .codeBlock {
+    max-width: 576px; } }
+
+@media (min-width: 768px) {
+  .cortana-content,
+  .codeExample,
+  .codeExampleFull .codeBlock {
+    max-width: 700px !important;
+    padding-left: 10px;
+    padding-right: 10px; } }
+
+@media (min-width: 992px) {
+  .cortana-content,
+  .codeExample,
+  .codeExampleFull .codeBlock {
+    max-width: 920px !important; } }
+
+@media (min-width: 1200px) {
+  .cortana-content,
+  .codeExample,
+  .codeExampleFull .codeBlock {
+    max-width: 1140px !important; } }

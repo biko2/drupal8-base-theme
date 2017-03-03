@@ -1,0 +1,14 @@
+      </div>
+      <div class="col-md-2">
+        <div class="submenu-container" data-spy="affix" data-offset-top="60">
+          <ul class="nav">
+          <% @blocks.each do |b| %>
+            <li><a href="#<%= b[:name] %>"><%= b[:title] %></a></li>
+          <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>

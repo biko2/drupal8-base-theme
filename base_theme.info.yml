@@ -1,0 +1,22 @@
+name: base_theme
+type: theme
+base theme: stable
+description: 'Tema Base de drupal con bootstrap 4'
+package: biko
+core: 8.x
+hidden: false
+
+libraries:
+  - base_theme/base
+libraries-extend:
+
+ckeditor_stylesheets:
+  - dist/css/style.css
+
+regions:
+  navbar_main: 'Navbar Main'
+  navbar_left:  'Navbar left'
+  navbar_right: 'Navbar right'
+  content: Content
+  footer: Footer
+  footer_bottom: 'Footer bottom'

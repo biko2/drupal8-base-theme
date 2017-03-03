@@ -1,0 +1,87 @@
+<% nameScope = @config['name_scope'] %>
+<!DOCTYPE html>
+<html ng-strict-di ng-app="styleguide">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title><%= title %></title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="css/vendors.css">
+    <link rel="stylesheet" href="css/cortana.css">
+
+    <!-- Source CSS -->
+    <% if @config['css_include'].to_s.strip.length != 0 %>
+      <% @config['css_include'].each do |css| %>
+        <link rel="stylesheet" href="<%= css %>">
+      <% end %>
+    <% end %>
+</head>
+
+  <body class="cortana-body">
+
+    <div id="waiting"></div>
+
+
+
+    <div class="sb-slidebar sb-left cortana-sidenav sb-style-overlay sb-width-custom" data-sb-width="200">
+
+      <% catWrappers = Array.new %>
+
+      <% @categories.each do |cat| %>
+        <% catWrapperName = cat[0].split(nameScope).first %>
+        <% if not catWrappers.include?(catWrapperName) %>
+          <% catWrappers.push(catWrapperName) %>
+        <% end %>
+      <% end %>
+
+      <nav class="cortana-nav">
+        <ul>
+          <% if file_name.include?('index.html') %>
+            <li><a class="active" href="index.html">Home</a></li>
+          <% else %>
+            <li><a href="index.html">Home</a></li>
+          <% end %>
+        </ul>
+        <ul>
+          <li><a href="" class="js-toggle-code">Mostrar/ocultar código</a></li>
+        </ul>
+
+        <% catWrappers.each do |wrapper| %>
+          <h3><%= wrapper %></h3>
+          <ul>
+          <% @categories.each do |cat| %>
+            <% if cat[0].include?(wrapper) %>
+              <% catName = cat[0].split(nameScope).last %>
+              <% if catName == title.split(nameScope).last %>
+                <li><a class="active" href="<%= cat[1] %>"><%= catName %></a></li>
+              <% else %>
+                <li><a href="<%= cat[1] %>"><%= catName %></a></li>
+              <% end %>
+            <% end %>
+          <% end %>
+          </ul>
+        <% end %>
+      </nav>
+    </div>
+
+    <div id="sb-site-all">
+
+      <header class="cortana-header sb-slide">
+        <% if title.split(nameScope).last %>
+          <h1><%= title %></h1>
+        <% elsif file_name.include?('index.html') %>
+          <h1>Guía de estilos</h1>
+        <% end %>
+        <div id="open-left" class="cortana-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+
+      <div id="sb-site">
+
+        <div class="cortana-container">
+          <div class="cortana-content-wrapper clearfix">
+            <div class="cortana-content">

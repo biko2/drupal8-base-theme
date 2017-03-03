@@ -1,0 +1,155 @@
+/* ==========================================================
+ * code.scss
+ * Code highlight colors scheme
+ *
+ * Author: Yann Gouffon, hello@yago.io
+ *
+ * Copyright 2014 Yann Gouffon
+ * Licensed under MIT
+ ========================================================== */
+
+.cortana-content code, .cortana-content pre {
+  display: inline-block;
+  font-family: $codeFont !important;
+  font-size: 12px !important;
+  border: 1px solid $silver !important;
+  padding: 2px 3px !important;
+  border-radius: 2px !important;
+  background: $white !important;
+  margin: 0 3px 0 0 !important;
+  word-break: keep-all !important;
+  word-wrap: normal !important;
+  white-space:pre !important;
+  color: $mine !important;
+}
+
+.codeBlock {
+  padding: 30px 4% 10px !important;
+  background: #1e221d !important;
+  color: $white !important;
+  font-size: 15px !important;
+  line-height: 1.4 !important;
+  overflow-x: auto !important;
+  margin-bottom: 20px !important;
+  position: relative !important;
+  width: auto !important;
+
+  &:after {
+    content: 'HTML' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    color: $asbestos !important;
+    border-right: 1px solid $asbestos !important;
+    border-bottom: 1px solid $asbestos !important;
+    border-bottom-right-radius: 4px !important;
+    padding: 0 5px !important;
+    display: inline-block !important;
+    font-family: $mainFont !important;
+    font-size: 11px !important;
+    line-height: 1.9 !important;
+  }
+  &.jsExample:after {
+    content: 'JavaScript' !important;
+  }
+  .highlight {
+    background: #1e221d !important;
+  }
+  pre {
+    font-family: $codeFont !important;
+    width: auto !important;
+    background: #1e221d !important;
+    word-break: keep-all !important;
+    word-wrap: normal !important;
+    white-space:pre !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    padding-left: 0 !important;
+    font-size: 12px !important;
+    position: relative !important;
+    line-height: 1.4 !important;
+    color: $white !important;
+    border: none !important;
+    overflow: visible !important;
+  }
+}
+.exampleOutput {
+    border-right: 0!important;
+    border-left: 0!important;
+    background-color: #fff;
+}
+.codeExample,
+.codeExampleFull .codeBlock {
+  max-width: $layout-max-width;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.codeExampleFull {
+  .exampleOutput {
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
+}
+.codeBlock {
+  hll { background-color: #ffffcc }
+  .c { color: #999988; font-style: italic } /* Comment */
+  .err { color: #a61717;} /* Error */
+  .k { color: #ffffff;} /* Keyword */
+  .o { color: #ffffff;} /* Operator */
+  .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+  .cp { color: #999999; font-style: italic } /* Comment.Preproc */
+  .c1 { color: #999988; font-style: italic } /* Comment.Single */
+  .cs { color: #999999; font-style: italic } /* Comment.Special */
+  .gd { color: #ffffff; background-color: #ffdddd } /* Generic.Deleted */
+  .ge { color: #ffffff; font-style: italic } /* Generic.Emph */
+  .gr { color: #aa0000 } /* Generic.Error */
+  .gh { color: #999999 } /* Generic.Heading */
+  .gi { color: #ffffff; background-color: #ddffdd } /* Generic.Inserted */
+  .go { color: #888888 } /* Generic.Output */
+  .gp { color: #555555 } /* Generic.Prompt */
+  .gs {} /* Generic.Strong */
+  .gu { color: #aaaaaa } /* Generic.Subheading */
+  .gt { color: #aa0000 } /* Generic.Traceback */
+  .kc { color: #ffffff;} /* Keyword.Constant */
+  .kd { color: #ffffff;} /* Keyword.Declaration */
+  .kn { color: #ffffff;} /* Keyword.Namespace */
+  .kp { color: #ffffff;} /* Keyword.Pseudo */
+  .kr { color: #ffffff;} /* Keyword.Reserved */
+  .kt { color: #445588;} /* Keyword.Type */
+  .m { color: #009999 } /* Literal.Number */
+  .s { color: #E6DB74 } /* Literal.String */
+  .na { color: #A6E22E } /* Name.Attribute */
+  .nb { color: #66D9EF } /* Name.Builtin */
+  .nc { color: #445588;} /* Name.Class */
+  .no { color: #A6E22E } /* Name.Constant */
+  .nd { color: #3c5d5d;} /* Name.Decorator */
+  .ni { color: #AE81FF } /* Name.Entity */
+  .ne { color: #990000;} /* Name.Exception */
+  .nf { color: #990000;} /* Name.Function */
+  .nl { color: #990000;} /* Name.Label */
+  .nn { color: #555555 } /* Name.Namespace */
+  .nt { color: #F92672 } /* Name.Tag */
+  .nv { color: #A6E22E } /* Name.Variable */
+  .ow { color: #ffffff;} /* Operator.Word */
+  .w { color: #bbbbbb } /* Text.Whitespace */
+  .mf { color: #009999 } /* Literal.Number.Float */
+  .mh { color: #009999 } /* Literal.Number.Hex */
+  .mi { color: #009999 } /* Literal.Number.Integer */
+  .mo { color: #009999 } /* Literal.Number.Oct */
+  .sb { color: #E6DB74 } /* Literal.String.Backtick */
+  .sc { color: #E6DB74 } /* Literal.String.Char */
+  .sd { color: #E6DB74 } /* Literal.String.Doc */
+  .s2 { color: #E6DB74 } /* Literal.String.Double */
+  .se { color: #E6DB74 } /* Literal.String.Escape */
+  .sh { color: #E6DB74 } /* Literal.String.Heredoc */
+  .si { color: #E6DB74 } /* Literal.String.Interpol */
+  .sx { color: #E6DB74 } /* Literal.String.Other */
+  .sr { color: #009926 } /* Literal.String.Regex */
+  .s1 { color: #E6DB74 } /* Literal.String.Single */
+  .ss { color: #990073 } /* Literal.String.Symbol */
+  .bp { color: #999999 } /* Name.Builtin.Pseudo */
+  .vc { color: #A6E22E } /* Name.Variable.Class */
+  .vg { color: #A6E22E } /* Name.Variable.Global */
+  .vi { color: #A6E22E } /* Name.Variable.Instance */
+  .il { color: #009999 } /* Literal.Number.Integer.Long */
+}

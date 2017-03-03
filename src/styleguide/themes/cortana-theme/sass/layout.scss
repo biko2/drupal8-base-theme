@@ -1,0 +1,150 @@
+/* ==========================================================
+ * layout.scss
+ * Global layout styles
+ *
+ * Author: Yann Gouffon, hello@yago.io
+ *
+ * Copyright 2014 Yann Gouffon
+ * Licensed under MIT
+ ========================================================== */
+
+$slidebar-size: 200px;
+
+.cortana-body, #sb-site {
+  //background: $softBlue !important;
+  z-index: auto !important;
+}
+
+.sb-slidebar.sb-style-overlay {
+  box-shadow: 0 19px 60px rgba(0, 0, 0, 0.30), 0 15px 20px rgba(0, 0, 0, 0.22);
+}
+
+@media(min-width: 600px) {
+  .cortana-content-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+// @media(min-width: 1000px) {
+//   #sb-site-all {
+//     transform: translateX($slidebar-size)!important;
+//     width: calc(100% - 200px);
+//   }
+//   .sb-slidebar {
+//     visibility: visible;
+//     transform: translateX($slidebar-size);
+//     box-shadow: none;
+//   }
+//   .cortana-content-wrapper {
+//     padding-left: 15px;
+//     padding-right: 15px;
+//   }
+// }
+
+#waiting {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9999999;
+
+  html.sb-init & {
+    display: none;
+  }
+}
+
+.section-nav {
+  display: none;
+}
+
+.cortana-header {
+  background: $white !important;
+  padding: 21px 0 !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 999 !important;
+  border-bottom: 1px solid $silver;
+  h1 {
+    color: $mine !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: $mainFont !important;
+    font-weight: normal !important;
+    font-size: 30px !important;
+    font-style: normal !important;
+    line-height: 1.1em !important;
+    text-transform: none !important;
+    @media only screen and (max-width: 767px) {
+      font-size: 20px !important;
+    }
+  }
+}
+
+.cortana-container {
+  margin: 0 auto !important;
+  padding-bottom: 30px !important;
+  border: 0 solid $softBlue !important;
+
+  @media only screen and (max-width: 900px) {
+    padding: 0 0px 50px 0px !important;
+  }
+}
+
+.cortana-content-wrapper {
+  //padding-top: 15px !important;
+  //padding-bottom: 40px !important;
+  //background: $white !important;
+  border-radius: 4px !important;
+  padding-top: 80px !important;
+}
+
+
+.exampleOutput {
+  padding: 30px 0 10px !important;
+
+  position: relative !important;
+  width: 100% !important;
+  //overflow-y: auto !important;
+  box-sizing: border-box !important;
+
+  &:after {
+    content: 'Ejemplo' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    color: $asbestos !important;
+    border-right: 1px solid $softBlue !important;
+    border-left: 1px solid $softBlue !important;
+    border-bottom: 1px solid $softBlue !important;
+    border-bottom-right-radius: 4px !important;
+    padding: 0px 5px !important;
+    display: inline-block !important;
+    font-family: $mainFont !important;
+    font-size: 11px !important;
+    line-height: 1.9 !important;
+  }
+
+  @media (min-width: 768px) {
+    border: 1px solid $softBlue !important;
+    padding: 30px 0 10px !important;
+  }
+}
+
+.cortana-footer {
+  font-family: $mainFont !important;
+  text-align: center !important;
+  padding-bottom: 50px !important;
+  font-size: 14px !important;
+  color: $asbestos !important;
+  background: none !important;
+  a {
+    color: $asbestos !important;
+    &:hover {color: $alizarin !important;}
+  }
+}
